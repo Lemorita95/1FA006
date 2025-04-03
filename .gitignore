@@ -1,6 +1,9 @@
 __pycache__
 .DS_Store
 0_intro
+
 1_astronomy/data
-1_astronomy/runs
+
+models
+runs
 *.docx
