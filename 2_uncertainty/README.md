@@ -37,7 +37,7 @@ Implementation of a neural network that predicts the temperature, gravity, and m
 
 ## challenges
 1. training model are giving negative loss for some activation function; <br>
-2. when scatter plotting predicted mean vs true values some points with zero correlation can be seen, they also have high standard deviation (~0.98); <br>
+2. when scatter plotting predicted mean vs true values with some activation functions (tanh, leakyrelu) some points with zero correlation can be seen, they also have high standard deviation (~0.98); <br>
 3. when using tanh as activation function for the last layer, pull histogram seems better but model predicts always predicts the same mean value - e.g. log(sigma) being more relevant on the loss function; <br>
 4. using percentile normalization also does not improved model prediction of mean and standard deviation, labels have higher bias; <br>
 5. softplus is the better so far; <br>
