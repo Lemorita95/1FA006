@@ -32,6 +32,7 @@ class CustomDataset(Dataset):
         self.X = np.load(X_path)
         self.y = np.load(y_path)
         self.name_labels = ["mass", "age", "l_bol", "dist", "t_eff", "log_g", "fe_h", "SNR"]
+        self.unit_labels = ["M_sun", "Byr", "L_sun", "pc", "K", "-", "-", "-"]
         
         # Use second-to-last three labels
         self.y = self.y[:, -4:-1] 
@@ -39,6 +40,7 @@ class CustomDataset(Dataset):
         # store number of labels and names
         self.num_labels = self.y.shape[1]
         self.name_labels = self.name_labels[-4:-1]
+        self.unit_labels = self.unit_labels[-4:-1]
 
         # normalize features
         self.X = np.log(np.maximum(0.2, self.X))
