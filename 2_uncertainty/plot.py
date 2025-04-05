@@ -114,7 +114,7 @@ def plot_pull_histogram(true_labels, predicted_means, predicted_stds, num_labels
     plt.savefig(os.path.join(IMAGES_DIR, filename))
     plt.show()
 
-def plot_scatter(true_labels, predicted_means, num_labels, name_labels, experiment_name):
+def plot_scatter(true_labels, predicted_means, num_labels, name_labels, unit_labels, experiment_name):
     
 
     plt.figure(figsize=(15, 5))
@@ -129,13 +129,34 @@ def plot_scatter(true_labels, predicted_means, num_labels, name_labels, experime
         plt.plot([true_labels[:, i].min(), true_labels[:, i].max()],
                 [true_labels[:, i].min(), true_labels[:, i].max()],
                 color="red", linestyle="--", label="True values line")
-        plt.xlabel("True Values")
-        plt.ylabel("Test Predictions")
+        plt.xlabel(f"True Values [{unit_labels[i]}]")
+        plt.ylabel(f"Test Predictions [{unit_labels[i]}]")
         plt.title(f"{name_labels[i]} (R2 = {r2:.2f})")
         plt.legend()
 
     plt.tight_layout()
     filename = f"predictions_{experiment_name}.png"
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    plt.savefig(os.path.join(IMAGES_DIR, filename))
+    plt.show()
+
+
+def plot_residuals(true_labels, predicted_means, predicted_std, num_labels, name_labels, unit_labels, experiment_name):
+    
+    plt.figure(figsize=(15, 5))
+
+    for i in range(num_labels):
+
+        plt.subplot(1, num_labels, i + 1)  # Create a subplot for each label
+        plt.scatter(true_labels[:, i], true_labels[:, i] - predicted_means[:, i], alpha=0.5, label=name_labels[i])
+        plt.hlines(0, true_labels[:, i].min(), true_labels[:, i].max(), color="red", linestyle="--", label="Zero line")
+        plt.xlabel(f"True Values [{unit_labels[i]}]")
+        plt.ylabel(f"Residuals (True - Predicted) [{unit_labels[i]}]")
+        plt.title(f"{name_labels[i]}")
+        plt.legend()
+
+    plt.tight_layout()
+    filename = f"residuals_{experiment_name}.png"
     os.makedirs(IMAGES_DIR, exist_ok=True)
     plt.savefig(os.path.join(IMAGES_DIR, filename))
     plt.show()

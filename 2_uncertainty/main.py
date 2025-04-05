@@ -4,7 +4,7 @@ from torch.utils.data import random_split, DataLoader
 # import custom modules
 from dataset import torch, np, CustomDataset
 from helpers import os, np, denormalize, nll_loss, new_model, load_model, test_model
-from plot import plot_train_loss, plot_pull_histogram, plot_scatter
+from plot import plot_train_loss, plot_pull_histogram, plot_scatter, plot_residuals
 
 # check for available devices and select if available
 if torch.cuda.is_available():
@@ -144,5 +144,15 @@ plot_scatter(
     denormalized_predicted_means,
     dataset.num_labels,
     dataset.name_labels,
+    dataset.unit_labels,
+    experiment_name,
+)
+
+plot_residuals(
+    denormalized_true_labels,
+    denormalized_predicted_means,
+    dataset.num_labels,
+    dataset.name_labels,
+    dataset.unit_labels,
     experiment_name,
 )
