@@ -48,3 +48,4 @@ Implementation of a neural network that predicts the temperature, gravity, and m
 10. adding more complexity to model increase its quality; <br>
 11. final configuration considered a good enough quality and time of execution of training; <br>
 12. the final model configuration overfitts around after 15 epochs; <br>
+13. for the future: it is possible to use different activation function for means and std and then torch.cat() before passing to output layer. when using softplus for mean and relu for log std the results (pull histogram) were way better -- the changes was not commited yet because already submitted assignment but will implement on the close future.
