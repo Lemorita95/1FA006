@@ -141,7 +141,7 @@ def plot_scatter(true_labels, predicted_means, num_labels, name_labels, unit_lab
     plt.show()
 
 
-def plot_residuals(true_labels, predicted_means, predicted_std, num_labels, name_labels, unit_labels, experiment_name):
+def plot_residuals(true_labels, predicted_means, num_labels, name_labels, unit_labels, experiment_name):
     
     plt.figure(figsize=(15, 5))
 
