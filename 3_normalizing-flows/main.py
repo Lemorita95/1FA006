@@ -44,7 +44,7 @@ learning_rate = 0.8e-4
 num_epochs = 10
 
 # define what model to use
-cnn_model = TinyCNN
+cnn_model = CNNModel
 
 # experiment name and model name
 experiment_name = f"astronomy_bs{batch_size}_lr{learning_rate}_ep{num_epochs}_{flow_type}_{cnn_model.__name__}"

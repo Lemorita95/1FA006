@@ -10,8 +10,9 @@ Implementation of a neural network that predicts the temperature, gravity, and m
 
 ## reproducibility
 1. Download data at https://huggingface.co/datasets/simbaswe/galah4/tree/main, labels.npy and spectra.npy;
-2. Change path of variables [location and DATA_DIR](main.py) it should points to the directory where the data from 1. it placed;
-3. Run [main.py](main.py);
+2. Change path of variables [line 33 and 34](main.py) it should points to the directory where the data from step 1 it placed;
+3. Choose flow -- [line 21](main.py);
+4. Run [main.py](main.py);
 
 ## approach
 0. hyperparameters:
