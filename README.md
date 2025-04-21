@@ -9,3 +9,6 @@ this is a repository that contains my assignments for the 1FA006 course at uppsa
 
 ## Assignment 3 - Normalizing Flows
 [assignment summary](3_normalizing-flows/README.md)
+
+## Assignment 4 - Graph Neural Network
+[assignment summary](4_gnn/README.md)
