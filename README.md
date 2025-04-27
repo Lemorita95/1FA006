@@ -12,3 +12,6 @@ this is a repository that contains my assignments for the 1FA006 course at uppsa
 
 ## Assignment 4 - Graph Neural Network
 [assignment summary](4_gnn/README.md)
+
+## Assignment 5 - Generative Models
+[assignment summary](5_generative-models/README.md)
