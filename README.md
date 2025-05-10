@@ -15,3 +15,9 @@ this is a repository that contains my assignments for the 1FA006 course at uppsa
 
 ## Assignment 5 - Generative Models
 [assignment summary](5_generative-models/README.md)
+
+## Assignment 6.1 - Simple Diffusion
+[assignment summary](6_diffusion-models/simple-diffusion/README.md)
+
+## Assignment 6.2 - Diffusion MNIST
+[assignment summary](6_diffusion-models/diffusion-mnist/README.md)
