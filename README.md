@@ -21,3 +21,6 @@ this is a repository that contains my assignments for the 1FA006 course at uppsa
 
 ## Assignment 6.2 - Diffusion MNIST
 [assignment summary](6_diffusion-models/diffusion-mnist/README.md)
+
+## Assignment 7 - Transformer
+[assignment summary](7_transformer/README.md)
