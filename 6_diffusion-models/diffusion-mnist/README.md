@@ -31,5 +31,5 @@ Design and training of a Denoising Diffusion Probabilistic Model (DDPM) to gener
 
 ## challenges
 1. easier to implement training (compared to the simple diffusion) thanks to denoising_diffusion_pytorch; <br>
-2. laborous training, however the results were good, slightly better then compared to the [GAN](../../4_gnn/main.py) implemented; <br>
+2. laborous training, however the results were good, slightly better then compared to the [GAN](../../5_generative-models/main.py) implemented; <br>
 3. did not implement tensorboard, it would be nice to see the image generation evolving; <br>
